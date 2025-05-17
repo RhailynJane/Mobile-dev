@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScript Variables</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+        background-color: #f9f9f9;
+        line-height: 1.6;
+      }
+      h1,
+      h2 {
+        color: #333;
+      }
+      pre {
+        background-color: #eee;
+        padding: 10px;
+        border-radius: 5px;
+        overflow-x: auto;
+      }
+      .output {
+        background-color: #222;
+        color: #0f0;
+        padding: 10px;
+        border-radius: 5px;
+        font-family: monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Variables</h1>
+    <p>
+      A variable is like a container that holds data that can be reused or
+      updated later in the program. In JavaScript, variables are declared using
+      the keywords <code>var</code>, <code>let</code>, or <code>const</code>.
+    </p>
+
+    <h2>1. var Keyword</h2>
+    <p>
+      The <code>var</code> keyword is used to declare a variable. It has a
+      function-scoped or globally-scoped behaviour.
+    </p>
+    <pre><code>var n = 5;
+console.log(n);
+
+var n = 20; // reassigning is allowed
+console.log(n);</code></pre>
+    <div class="output">
+      Output:<br />
+      5<br />
+      20
+    </div>
+
+    <h2>2. let Keyword</h2>
+    <p>
+      The <code>let</code> keyword is introduced in ES6, has block scope, and
+      cannot be re-declared in the same scope.
+    </p>
+    <pre><code>let n = 10;
+n = 20; // Value can be updated
+// let n = 15; // Cannot redeclare in the same scope
+console.log(n);</code></pre>
+    <div class="output">
+      Output:<br />
+      20
+    </div>
+
+    <h2>3. const Keyword</h2>
+    <p>
+      The <code>const</code> keyword declares variables that cannot be
+      reassigned. It's block-scoped as well.
+    </p>
+    <pre><code>const n = 100;
+// n = 200; // This will throw an error
+console.log(n);</code></pre>
+    <div class="output">
+      Output:<br />
+      100
+    </div>
+  </body>
+</html>
