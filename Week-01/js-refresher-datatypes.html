@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JavaScript Data Types</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        line-height: 1.6;
+        background-color: #f9f9f9;
+      }
+      h1,
+      h2 {
+        color: #333;
+      }
+      pre {
+        background-color: #eee;
+        padding: 10px;
+        border-left: 4px solid #4caf50;
+        overflow-x: auto;
+      }
+      code {
+        font-family: monospace;
+        color: #000;
+      }
+      .output {
+        background: #fff;
+        border: 1px dashed #aaa;
+        padding: 5px 10px;
+        margin-top: 5px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Data Types</h1>
+    <p>
+      JavaScript supports various datatypes, which can be broadly categorized
+      into <strong>primitive</strong> and <strong>non-primitive</strong> types.
+    </p>
+
+    <h2>Primitive Datatypes</h2>
+    <p>Primitive datatypes represent single values and are immutable.</p>
+
+    <h3>1. Number</h3>
+    <p>Represents numeric values (integers and decimals).</p>
+    <pre><code>let n = 42;
+let pi = 3.14;</code></pre>
+
+    <h3>2. String</h3>
+    <p>Represents text enclosed in single or double quotes.</p>
+    <pre><code>let s = "Hello, World!";</code></pre>
+
+    <h3>3. Boolean</h3>
+    <p>Represents a logical value (<code>true</code> or <code>false</code>).</p>
+    <pre><code>let bool = true;</code></pre>
+
+    <h3>4. Undefined</h3>
+    <p>A variable that has been declared but not assigned a value.</p>
+    <pre><code>let notAssigned;
+console.log(notAssigned);</code></pre>
+    <div class="output">Output: undefined</div>
+
+    <h3>5. Null</h3>
+    <p>Represents an intentional absence of any value.</p>
+    <pre><code>let empty = null;</code></pre>
+
+    <h3>6. Symbol</h3>
+    <p>Represents unique and immutable values, often used as object keys.</p>
+    <pre><code>let sym = Symbol('unique');</code></pre>
+
+    <h3>7. BigInt</h3>
+    <p>Represents integers larger than <code>Number.MAX_SAFE_INTEGER</code>.</p>
+    <pre><code>let bigNumber = 123456789012345678901234567890n;</code></pre>
+
+    <h2>Non-Primitive Datatypes</h2>
+    <p>
+      Non-primitive types are objects and can store collections of data or more
+      complex entities.
+    </p>
+
+    <h3>1. Object</h3>
+    <p>Represents key-value pairs.</p>
+    <pre><code>let obj = {
+  name: "Amit",
+  age: 25
+};</code></pre>
+
+    <h3>2. Array</h3>
+    <p>Represents an ordered list of values.</p>
+    <pre><code>let a = ["red", "green", "blue"];</code></pre>
+
+    <h3>3. Function</h3>
+    <p>Represents reusable blocks of code.</p>
+    <pre><code>function fun() {
+  console.log("GeeksforGeeks");
+}</code></pre>
+
+    <h2>Data Types</h2>
+    <img
+      src="images/datatypes.png"
+      alt="Data Types Examples"
+      style="max-width: 100%; height: auto"
+    />
+  </body>
+</html>
