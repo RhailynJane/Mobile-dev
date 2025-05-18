@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScript Array map() Method</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>JavaScript <code>map()</code> Method</h1>
+
+    <p>
+      The <code>map()</code> method is an ES5 feature that creates a new array
+      by applying a function to each element of the original array. It skips
+      empty elements and does not modify the original array.
+    </p>
+
+    <h2>Syntax</h2>
+    <pre><code>arr.map((element, index, array) => { /* … */ })</code></pre>
+
+    <ul>
+      <li>
+        <strong>element</strong>: Required — the current element being processed
+      </li>
+      <li>
+        <strong>index</strong>: Optional — the index of the current element
+      </li>
+      <li>
+        <strong>array</strong>: Optional — the original array being processed
+      </li>
+    </ul>
+
+    <p>
+      <strong>Return Value:</strong> A new array with the results of the
+      callback function.
+    </p>
+
+    <section>
+      <h2>Example 1: Double Each Element</h2>
+      <pre><code>const a = [1, 2, 3, 4];
+const b = a.map(x => x * 2);
+console.log(b);</code></pre>
+      <div class="output">[2, 4, 6, 8]</div>
+    </section>
+
+    <section>
+      <h2>Example 2: Square Roots of Each Number</h2>
+      <pre><code>const a = [1, 4, 9, 16, 25];
+const sr = a.map(num => Math.sqrt(num));
+console.log(sr);</code></pre>
+      <div class="output">[1, 2, 3, 4, 5]</div>
+    </section>
+
+    <section>
+      <h2>Example 3: Return Object with Index and Square</h2>
+      <pre><code>let a = [2, 5, 6, 3, 8, 9];
+let res = a.map(function (val, index) {
+  return { key: index, value: val * val };
+});
+console.log(res);</code></pre>
+      <div class="output">
+        [ { key: 0, value: 4 }, { key: 1, value: 25 }, { key: 2, value: 36 }, {
+        key: 3, value: 9 }, { key: 4, value: 64 }, { key: 5, value: 81 } ]
+      </div>
+    </section>
+
+    <section>
+      <h2>Example 4: Concatenate 'A' with Each Character of a String</h2>
+      <pre><code>let s = "Geeks";
+let res = Array.prototype.map.call(s, function (item) {
+  return item + 'A';
+});
+console.log(res);</code></pre>
+      <div class="output">['GA', 'eA', 'eA', 'kA', 'sA']</div>
+    </section>
+
+    <section>
+      <h2>Example 5: Using <code>parseInt()</code> with <code>map()</code></h2>
+      <pre><code>const a = ['10', '20', '30'];
+const b = a.map(s => parseInt(s));
+console.log(b);</code></pre>
+      <div class="output">[10, 20, 30]</div>
+    </section>
+    <br />
+    <br />
+    <br />
+    <br />
+    <a href="./index.html" class="back-btn">← Back to Week 1</a>
+    <br />
+    <br />
+    <a href="../index.html" class="back-btn">← Back to Homepage</a>
+    <footer
+      style="
+        margin-top: 50px;
+        padding: 10px;
+        text-align: center;
+        background-color: #f0f0f0;
+        border-top: 1px solid #ccc;
+      "
+    >
+      <p>
+        Reference:
+        <a href="https://www.geeksforgeeks.org/" target="_blank"
+          >GeeksforGeeks</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>

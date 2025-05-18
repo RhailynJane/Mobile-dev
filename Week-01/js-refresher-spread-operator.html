@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Spread Operator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>JavaScript Spread Operator</h1>
+    <p>
+      The <strong>Spread operator</strong> (<code>...</code>) is used with
+      iterables like arrays and strings, or object properties, to expand them
+      where multiple elements or properties are expected.
+    </p>
+
+    <h2>1. Adding Multiple Elements Using Spread Operator</h2>
+    <pre><code>
+let a = [10, 20];
+let b = [...a, 30, 40];
+
+console.log(a); // Output: [10, 20]
+console.log(b); // Output: [10, 20, 30, 40]
+  </code></pre>
+
+    <p>You can also insert at the beginning and both ends:</p>
+    <pre><code>
+let a = [10, 20];
+let b = [30, 40, ...a, 50, 60];
+
+console.log(b); // Output: [30, 40, 10, 20, 50, 60]
+  </code></pre>
+
+    <h2>2. Find Min / Max using Spread Operator</h2>
+    <pre><code>
+let a = [1, 2, 3, -1];
+console.log(Math.min(a));      // NaN
+console.log(Math.min(...a));   // -1
+  </code></pre>
+
+    <h2>3. Passing Array Elements as Function Parameters</h2>
+    <pre><code>
+function add(x, y, z) {
+  return x + y + z;
+}
+
+let a = [10, 20, 30];
+console.log(add(...a)); // Output: 60
+  </code></pre>
+
+    <h2>4. Copying Array using Spread</h2>
+    <pre><code>
+const a = [1, 2, 3];
+const b = [...a]; 
+console.log(b); // Output: [1, 2, 3]
+
+// Reference copy (not recommended)
+// const c = [1, 2, 3];
+// const d = c;
+// d.push(4);
+// console.log(c); // Output: [1, 2, 3, 4]
+  </code></pre>
+
+    <h2>5. Concatenate Arrays using Spread Operator</h2>
+    <pre><code>
+let a = [1, 2, 3];
+let b = [4, 5];
+
+a = [...a, ...b];
+console.log(a); // Output: [1, 2, 3, 4, 5]
+  </code></pre>
+
+    <h2>6. Working with Objects using Spread Operator</h2>
+    <pre><code>
+// Cloning an object
+const usr = {
+  name: 'Jen',
+  age: 22
+};
+
+const cloneUsr = { ...usr };
+console.log(cloneUsr); // Output: { name: 'Jen', age: 22 }
+  </code></pre>
+
+    <pre><code>
+// Merging two objects
+const usr1 = { name: 'Jen', age: 22 };
+const usr2 = { name: 'Andrew', location: 'Philadelphia' };
+
+const mergedUsers = { ...usr1, ...usr2 };
+console.log(mergedUsers); // Output: { name: 'Andrew', age: 22, location: 'Philadelphia' }
+  </code></pre>
+
+    <pre><code>
+// Adding properties to an object
+const o1 = { a: 1, b: 2 };
+const o2 = { ...o1, b: 3, c: 4 };
+console.log(o2); // Output: { a: 1, b: 3, c: 4 }
+  </code></pre>
+    <br />
+    <br />
+    <br />
+    <br />
+    <a href="./index.html" class="back-btn">← Back to Week 1</a>
+    <br />
+    <br />
+    <a href="../index.html" class="back-btn">← Back to Homepage</a>
+    <footer
+      style="
+        margin-top: 50px;
+        padding: 10px;
+        text-align: center;
+        background-color: #f0f0f0;
+        border-top: 1px solid #ccc;
+      "
+    >
+      <p>
+        Reference:
+        <a href="https://www.geeksforgeeks.org/" target="_blank"
+          >GeeksforGeeks</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>

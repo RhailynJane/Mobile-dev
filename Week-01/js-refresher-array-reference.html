@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScript Array Reference</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>JavaScript Array Reference</h1>
+
+    <section>
+      <p>
+        JavaScript Arrays are used to store multiple elements in a single
+        variable. They can hold numbers, strings, objects, and even other
+        arrays.
+      </p>
+      <h2>Syntax</h2>
+      <pre><code>const arr = ["Item1", "Item2", "Item3"];</code></pre>
+    </section>
+
+    <section>
+      <h2>Example: Copying Array Items</h2>
+      <pre><code>// Create and initialize an array
+let courses = ["HTML", "CSS", "JavaScript", "React"];
+
+// Display the array items
+console.log(courses);
+
+// Create a new empty array
+let newArray = [];
+
+// Copy elements using forEach
+courses.forEach(function (course) {
+    newArray.push(course);
+});
+
+// Display the new array
+console.log(newArray);</code></pre>
+      <div class="output">
+        [ 'HTML', 'CSS', 'JavaScript', 'React' ]<br />
+        [ 'HTML', 'CSS', 'JavaScript', 'React' ]
+      </div>
+    </section>
+
+    <section>
+      <h2>JavaScript Array Constructor</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Constructor</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>Array()</code></td>
+            <td>Creates a new array.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>JavaScript Array Properties</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Instance Property</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>constructor</code></td>
+            <td>Returns a reference to the array function.</td>
+          </tr>
+          <tr>
+            <td><code>length</code></td>
+            <td>Gets or sets the number of elements in an array.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>JavaScript Array Methods</h2>
+
+      <h3>Static Methods</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Method</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>Array.from()</code></td>
+            <td>Creates an array from iterable or array-like objects.</td>
+          </tr>
+          <tr>
+            <td><code>Array.isArray()</code></td>
+            <td>Returns true if the value is an array.</td>
+          </tr>
+          <tr>
+            <td><code>Array.of()</code></td>
+            <td>Creates a new array instance with given elements.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Instance Methods</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Method</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>at()</code></td>
+            <td>Returns the element at the specified index.</td>
+          </tr>
+          <tr>
+            <td><code>concat()</code></td>
+            <td>Merges two or more arrays.</td>
+          </tr>
+          <tr>
+            <td><code>copyWithin()</code></td>
+            <td>Copies part of the array within itself.</td>
+          </tr>
+          <tr>
+            <td><code>entries()</code></td>
+            <td>Returns key/value pairs from the array.</td>
+          </tr>
+          <tr>
+            <td><code>every()</code></td>
+            <td>Tests whether all elements pass a condition.</td>
+          </tr>
+          <tr>
+            <td><code>fill()</code></td>
+            <td>Fills all the elements with a static value.</td>
+          </tr>
+          <tr>
+            <td><code>filter()</code></td>
+            <td>Creates a new array with elements that pass the test.</td>
+          </tr>
+          <tr>
+            <td><code>find()</code></td>
+            <td>Returns the first element that satisfies the condition.</td>
+          </tr>
+          <tr>
+            <td><code>findIndex()</code></td>
+            <td>Returns the index of the first matching element.</td>
+          </tr>
+          <tr>
+            <td><code>flat()</code></td>
+            <td>Flattens nested arrays.</td>
+          </tr>
+          <tr>
+            <td><code>flatMap()</code></td>
+            <td>Maps and flattens the result.</td>
+          </tr>
+          <tr>
+            <td><code>forEach()</code></td>
+            <td>Executes a function once for each element.</td>
+          </tr>
+          <tr>
+            <td><code>includes()</code></td>
+            <td>Checks if array contains a specified value.</td>
+          </tr>
+          <tr>
+            <td><code>indexOf()</code></td>
+            <td>Returns the first index of an element.</td>
+          </tr>
+          <tr>
+            <td><code>join()</code></td>
+            <td>Joins all elements into a string.</td>
+          </tr>
+          <tr>
+            <td><code>keys()</code></td>
+            <td>Returns an array iterator with keys.</td>
+          </tr>
+          <tr>
+            <td><code>lastIndexOf()</code></td>
+            <td>Returns the last index of an element.</td>
+          </tr>
+          <tr>
+            <td><code>map()</code></td>
+            <td>Creates a new array with the results of calling a function.</td>
+          </tr>
+          <tr>
+            <td><code>pop()</code></td>
+            <td>Removes the last element and returns it.</td>
+          </tr>
+          <tr>
+            <td><code>push()</code></td>
+            <td>Adds new elements to the end.</td>
+          </tr>
+          <tr>
+            <td><code>reduce()</code></td>
+            <td>Applies a function to reduce to a single value.</td>
+          </tr>
+          <tr>
+            <td><code>reduceRight()</code></td>
+            <td>Applies reduce from right to left.</td>
+          </tr>
+          <tr>
+            <td><code>reverse()</code></td>
+            <td>Reverses the array in place.</td>
+          </tr>
+          <tr>
+            <td><code>shift()</code></td>
+            <td>Removes the first element.</td>
+          </tr>
+          <tr>
+            <td><code>slice()</code></td>
+            <td>Returns a portion of an array.</td>
+          </tr>
+          <tr>
+            <td><code>some()</code></td>
+            <td>Tests whether at least one element passes the test.</td>
+          </tr>
+          <tr>
+            <td><code>sort()</code></td>
+            <td>Sorts the array in place.</td>
+          </tr>
+          <tr>
+            <td><code>splice()</code></td>
+            <td>Changes the contents by removing or replacing.</td>
+          </tr>
+          <tr>
+            <td><code>toLocaleString()</code></td>
+            <td>Converts elements to a localized string.</td>
+          </tr>
+          <tr>
+            <td><code>toString()</code></td>
+            <td>Converts array to string.</td>
+          </tr>
+          <tr>
+            <td><code>unshift()</code></td>
+            <td>Adds new elements to the beginning.</td>
+          </tr>
+          <tr>
+            <td><code>values()</code></td>
+            <td>Returns an iterator with the array values.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <br />
+    <br />
+    <br />
+    <br />
+    <a href="./index.html" class="back-btn">← Back to Week 1</a>
+    <br />
+    <br />
+    <a href="../index.html" class="back-btn">← Back to Homepage</a>
+    <footer
+      style="
+        margin-top: 50px;
+        padding: 10px;
+        text-align: center;
+        background-color: #f0f0f0;
+        border-top: 1px solid #ccc;
+      "
+    >
+      <p>
+        Reference:
+        <a href="https://www.geeksforgeeks.org/" target="_blank"
+          >GeeksforGeeks</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>

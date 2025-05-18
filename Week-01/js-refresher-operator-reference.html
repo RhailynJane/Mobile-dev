@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScript Operators</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>JavaScript Operators</h1>
+
+    <p>
+      JavaScript Operators are used to perform specific mathematical and logical
+      computations on operands. They are used to compare values, perform
+      arithmetic operations, and more.
+    </p>
+
+    <h2>Example: Using <code>typeof</code> Operator</h2>
+    <pre><code>let a = 17;
+let b = "GeeksforGeeks";
+let c = "";
+let d = null;
+
+console.log("Type of a = " + (typeof a));
+console.log("Type of b = " + (typeof b));
+console.log("Type of c = " + (typeof c));
+console.log("Type of d = " + (typeof d));
+console.log("Type of e = " + (typeof e));</code></pre>
+
+    <strong>Output:</strong>
+    <pre><code>Type of a = number
+Type of b = string
+Type of c = string
+Type of d = object
+Type of e = undefined</code></pre>
+
+    <h2>JavaScript Arithmetic Operators</h2>
+    <table>
+      <tr>
+        <th>Operator</th>
+        <th>Name</th>
+        <th>Operation</th>
+      </tr>
+      <tr>
+        <td>+</td>
+        <td>Addition</td>
+        <td>Add numbers or concatenate strings</td>
+      </tr>
+      <tr>
+        <td>-</td>
+        <td>Subtraction</td>
+        <td>Subtract two numbers</td>
+      </tr>
+      <tr>
+        <td>*</td>
+        <td>Multiplication</td>
+        <td>Multiply two numbers</td>
+      </tr>
+      <tr>
+        <td>/</td>
+        <td>Division</td>
+        <td>Divide two numbers</td>
+      </tr>
+      <tr>
+        <td>%</td>
+        <td>Modulus</td>
+        <td>Find remainder</td>
+      </tr>
+      <tr>
+        <td>**</td>
+        <td>Exponentiation</td>
+        <td>Raise left operand to power of right</td>
+      </tr>
+      <tr>
+        <td>++</td>
+        <td>Increment</td>
+        <td>Increase by one</td>
+      </tr>
+      <tr>
+        <td>--</td>
+        <td>Decrement</td>
+        <td>Decrease by one</td>
+      </tr>
+    </table>
+
+    <h2>JavaScript Comparison Operators</h2>
+    <table>
+      <tr>
+        <th>Operator</th>
+        <th>Name</th>
+        <th>Operation</th>
+      </tr>
+      <tr>
+        <td>==</td>
+        <td>Equality</td>
+        <td>Check if equal</td>
+      </tr>
+      <tr>
+        <td>!=</td>
+        <td>Inequality</td>
+        <td>Check if not equal</td>
+      </tr>
+      <tr>
+        <td>===</td>
+        <td>Strict Equality</td>
+        <td>Check if equal and same type</td>
+      </tr>
+      <tr>
+        <td>!==</td>
+        <td>Strict Inequality</td>
+        <td>Check if not equal or not same type</td>
+      </tr>
+      <tr>
+        <td>&gt;</td>
+        <td>Greater Than</td>
+        <td>Check if greater</td>
+      </tr>
+      <tr>
+        <td>&lt;</td>
+        <td>Less Than</td>
+        <td>Check if smaller</td>
+      </tr>
+      <tr>
+        <td>&gt;=</td>
+        <td>Greater or Equal</td>
+        <td>Check if greater or equal</td>
+      </tr>
+      <tr>
+        <td>&lt;=</td>
+        <td>Less or Equal</td>
+        <td>Check if smaller or equal</td>
+      </tr>
+    </table>
+
+    <h2>JavaScript Logical Operators</h2>
+    <table>
+      <tr>
+        <th>Operator</th>
+        <th>Name</th>
+        <th>Operation</th>
+      </tr>
+      <tr>
+        <td>!</td>
+        <td>NOT</td>
+        <td>Returns opposite boolean</td>
+      </tr>
+      <tr>
+        <td>&&</td>
+        <td>AND</td>
+        <td>True if all operands are true</td>
+      </tr>
+      <tr>
+        <td>||</td>
+        <td>OR</td>
+        <td>True if at least one operand is true</td>
+      </tr>
+    </table>
+
+    <h2>JavaScript Bitwise Operators</h2>
+    <table>
+      <tr>
+        <th>Operator</th>
+        <th>Name</th>
+        <th>Operation</th>
+      </tr>
+      <tr>
+        <td>&</td>
+        <td>AND</td>
+        <td>True if both bits are 1</td>
+      </tr>
+      <tr>
+        <td>|</td>
+        <td>OR</td>
+        <td>True if at least one bit is 1</td>
+      </tr>
+      <tr>
+        <td>^</td>
+        <td>XOR</td>
+        <td>True if bits are different</td>
+      </tr>
+      <tr>
+        <td>~</td>
+        <td>NOT</td>
+        <td>Inverts the bits</td>
+      </tr>
+      <tr>
+        <td>&lt;&lt;</td>
+        <td>Left Shift</td>
+        <td>Shift bits left</td>
+      </tr>
+      <tr>
+        <td>&gt;&gt;</td>
+        <td>Right Shift</td>
+        <td>Shift bits right</td>
+      </tr>
+      <tr>
+        <td>&gt;&gt;&gt;</td>
+        <td>Zero Fill Right Shift</td>
+        <td>Right shift and fill with 0</td>
+      </tr>
+    </table>
+
+    <h2>JavaScript Assignment Operators</h2>
+    <table>
+      <tr>
+        <th>Operator</th>
+        <th>Name</th>
+        <th>Operation</th>
+      </tr>
+      <tr>
+        <td>+=</td>
+        <td>Addition Assignment</td>
+        <td>Add and assign</td>
+      </tr>
+      <tr>
+        <td>-=</td>
+        <td>Subtraction Assignment</td>
+        <td>Subtract and assign</td>
+      </tr>
+      <tr>
+        <td>*=</td>
+        <td>Multiplication Assignment</td>
+        <td>Multiply and assign</td>
+      </tr>
+      <tr>
+        <td>/=</td>
+        <td>Division Assignment</td>
+        <td>Divide and assign</td>
+      </tr>
+      <tr>
+        <td>%=</td>
+        <td>Remainder Assignment</td>
+        <td>Remainder and assign</td>
+      </tr>
+      <tr>
+        <td>**=</td>
+        <td>Exponentiation Assignment</td>
+        <td>Exponent and assign</td>
+      </tr>
+      <tr>
+        <td>&lt;&lt;=</td>
+        <td>Left Shift Assignment</td>
+        <td>Left shift and assign</td>
+      </tr>
+      <tr>
+        <td>&gt;&gt;=</td>
+        <td>Right Shift Assignment</td>
+        <td>Right shift and assign</td>
+      </tr>
+      <tr>
+        <td>&=</td>
+        <td>Bitwise AND Assignment</td>
+        <td>AND and assign</td>
+      </tr>
+      <tr>
+        <td>|=</td>
+        <td>Bitwise OR Assignment</td>
+        <td>OR and assign</td>
+      </tr>
+      <tr>
+        <td>^=</td>
+        <td>Bitwise XOR Assignment</td>
+        <td>XOR and assign</td>
+      </tr>
+    </table>
+
+    <h2>Few Important JavaScript Operators</h2>
+    <ul>
+      <li><strong>Ternary (?:)</strong> - Simplified if-else</li>
+      <li><strong>typeof</strong> - Returns data type</li>
+      <li><strong>instanceof</strong> - Checks object type at runtime</li>
+      <li><strong>delete</strong> - Removes property from object</li>
+      <li><strong>in</strong> - Checks if a property exists in object</li>
+      <li><strong>...</strong> (Spread) - Expands iterable to elements</li>
+      <li><strong>,</strong> (Comma) - Separates operands</li>
+      <li><strong>( )</strong> (Grouping) - Overrides precedence</li>
+      <li>
+        <strong>??</strong> (Nullish Coalescing) - Returns fallback if
+        null/undefined
+      </li>
+      <li><strong>?.</strong> (Optional chaining) - Safe property access</li>
+      <li>
+        <strong>|></strong> (Pipeline) - Pipes value into function (stage 2
+        proposal)
+      </li>
+      <li><strong>=></strong> (Arrow) - Short function syntax</li>
+    </ul>
+    <br />
+    <br />
+    <br />
+    <br />
+    <a href="./index.html" class="back-btn">← Back to Week 1</a>
+    <br />
+    <br />
+    <a href="../index.html" class="back-btn">← Back to Homepage</a>
+    <footer
+      style="
+        margin-top: 50px;
+        padding: 10px;
+        text-align: center;
+        background-color: #f0f0f0;
+        border-top: 1px solid #ccc;
+      "
+    >
+      <p>
+        Reference:
+        <a href="https://www.geeksforgeeks.org/" target="_blank"
+          >GeeksforGeeks</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>
