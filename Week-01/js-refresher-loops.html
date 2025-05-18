@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScript Loops</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>JavaScript Loops</h1>
+
+    <p>
+      Loops in JavaScript are used to reduce repetitive tasks by repeatedly
+      executing a block of code as long as a specified condition is true. This
+      makes code more concise and efficient.
+    </p>
+
+    <section>
+      <h2>Example: Print "Hello World" 5 times</h2>
+      <pre><code>for (let i = 0; i &lt; 5; i++) {
+  console.log("Hello World!");
+}</code></pre>
+      <div class="output">
+        Hello World!<br />
+        Hello World!<br />
+        Hello World!<br />
+        Hello World!<br />
+        Hello World!
+      </div>
+    </section>
+
+    <section>
+      <h2>1. JavaScript for Loop</h2>
+      <p>
+        The <code>for</code> loop repeats a block of code a specific number of
+        times.
+      </p>
+      <pre><code>for (let i = 1; i &lt;= 3; i++) {
+  console.log("Count:", i);
+}</code></pre>
+      <div class="output">
+        Count: 1<br />
+        Count: 2<br />
+        Count: 3
+      </div>
+    </section>
+
+    <section>
+      <h2>2. JavaScript while Loop</h2>
+      <p>
+        The <code>while</code> loop executes as long as the condition is true.
+      </p>
+      <pre><code>let i = 0;
+while (i &lt; 3) {
+  console.log("Number:", i);
+  i++;
+}</code></pre>
+      <div class="output">
+        Number: 0<br />
+        Number: 1<br />
+        Number: 2
+      </div>
+    </section>
+
+    <section>
+      <h2>3. JavaScript do-while Loop</h2>
+      <p>
+        The <code>do-while</code> loop executes the block at least once before
+        checking the condition.
+      </p>
+      <pre><code>let i = 0;
+do {
+  console.log("Iteration:", i);
+  i++;
+} while (i &lt; 3);</code></pre>
+      <div class="output">
+        Iteration: 0<br />
+        Iteration: 1<br />
+        Iteration: 2
+      </div>
+    </section>
+
+    <section>
+      <h2>4. JavaScript for-in Loop</h2>
+      <p>The <code>for...in</code> loop iterates over the keys of an object.</p>
+      <pre><code>const obj = { name: "Ashish", age: 25 };
+for (let key in obj) {
+  console.log(key, ":", obj[key]);
+}</code></pre>
+      <div class="output">
+        name : Ashish<br />
+        age : 25
+      </div>
+    </section>
+
+    <section>
+      <h2>5. JavaScript for-of Loop</h2>
+      <p>
+        The <code>for...of</code> loop iterates over values of iterable objects
+        like arrays.
+      </p>
+      <pre><code>let a = [1, 2, 3, 4, 5];
+for (let val of a) {
+  console.log(val);
+}</code></pre>
+      <div class="output">
+        1<br />
+        2<br />
+        3<br />
+        4<br />
+        5
+      </div>
+    </section>
+
+    <section>
+      <h2>6. JavaScript forEach Method</h2>
+      <p>
+        The <code>forEach</code> method executes a provided function once for
+        each array element.
+      </p>
+      <pre><code>let nums = [10, 20, 30];
+nums.forEach(function(num) {
+  console.log("Value:", num);
+});</code></pre>
+      <div class="output">
+        Value: 10<br />
+        Value: 20<br />
+        Value: 30
+      </div>
+    </section>
+
+    <section>
+      <h2>Choosing the Right Loop</h2>
+      <ul>
+        <li>
+          <strong>for loop:</strong> Use when the number of iterations is known.
+        </li>
+        <li>
+          <strong>while loop:</strong> Use when the condition depends on dynamic
+          factors.
+        </li>
+        <li>
+          <strong>do-while loop:</strong> Use when the loop must run at least
+          once.
+        </li>
+        <li>
+          <strong>for...in loop:</strong> Use for iterating over object
+          properties.
+        </li>
+        <li>
+          <strong>for...of loop:</strong> Use for iterable objects like arrays
+          or strings.
+        </li>
+        <li>
+          <strong>forEach:</strong> Use to process each element in an array with
+          a function.
+        </li>
+      </ul>
+    </section>
+
+    <br /><br /><br /><br />
+    <a href="./index.html" class="back-btn">← Back to Week 1</a><br /><br />
+    <a href="../index.html" class="back-btn">← Back to Homepage</a>
+
+    <footer
+      style="
+        margin-top: 50px;
+        padding: 10px;
+        text-align: center;
+        background-color: #f0f0f0;
+        border-top: 1px solid #ccc;
+      "
+    >
+      <p>
+        Reference:
+        <a href="https://www.geeksforgeeks.org/" target="_blank"
+          >GeeksforGeeks</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>

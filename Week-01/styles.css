@@ -62,3 +62,6 @@ th {
 p.description {
   font-style: italic;
 }
+section {
+  margin-bottom: 30px;
+}
