@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object Exercise - JavaScript</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        line-height: 1.6;
+      }
+      h1 {
+        color: #333;
+      }
+      pre {
+        background-color: #f4f4f4;
+        padding: 15px;
+        border-radius: 5px;
+        overflow-x: auto;
+      }
+      code {
+        font-family: "Courier New", Courier, monospace;
+      }
+      footer {
+        margin-top: 50px;
+        padding: 10px;
+        text-align: center;
+        background-color: #f0f0f0;
+        border-top: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Object Exercise</h1>
+
+    <h2>Instructions:</h2>
+    <ol>
+      <li>
+        <strong>Create an Object:</strong> Create an object called
+        <code>car</code> with properties: make, model, year, color, and
+        isRunning.
+      </li>
+      <li>
+        <strong>Access and Log Properties:</strong> Access and log properties of
+        the <code>car</code> object.
+      </li>
+      <li>
+        <strong>Modify Properties:</strong> Change the
+        <code>color</code> property and log it.
+      </li>
+      <li>
+        <strong>Add a Method:</strong> Add <code>start</code> method to set
+        <code>isRunning</code> to true and log a message.
+      </li>
+      <li>
+        <strong>Call the Method:</strong> Call <code>start</code> and log
+        <code>isRunning</code>.
+      </li>
+      <li>
+        <strong>Add a New Property:</strong> Add <code>fuelLevel</code> and log
+        it.
+      </li>
+      <li>
+        <strong>Create a Method to Refuel:</strong> Add
+        <code>refuel</code> method to update <code>fuelLevel</code>.
+      </li>
+      <li>
+        <strong>Call the Refuel Method:</strong> Call <code>refuel</code> with a
+        parameter and log the result.
+      </li>
+    </ol>
+
+    <h2>JavaScript Code:</h2>
+    <pre><code>// Step 1: Create an Object
+let car = {
+  make: "Toyota",
+  model: "Corolla",
+  year: 2021,
+  color: "Red",
+  isRunning: false
+};
+
+// Step 2: Access and Log Properties
+console.log(car.make);   // Output: "Toyota"
+console.log(car.year);   // Output: 2021
+
+// Step 3: Modify Properties
+car.color = "Blue";
+console.log(car.color);  // Output: "Blue"
+
+// Step 4: Add a Method
+car.start = function() {
+  this.isRunning = true;
+  console.log("The car has started.");
+};
+
+// Step 5: Call the Method
+car.start();
+console.log(car.isRunning);  // Output: true
+
+// Step 6: Add a New Property
+car.fuelLevel = 50;
+console.log(car.fuelLevel);  // Output: 50
+
+// Step 7: Create a Method to Refuel
+car.refuel = function(amount) {
+  this.fuelLevel += amount;
+  console.log("Fuel level is now: " + this.fuelLevel);
+};
+
+// Step 8: Call the Refuel Method
+car.refuel(20);  // Output: "Fuel level is now: 70"
+</code></pre>
+
+    <h2>Output:</h2>
+    <pre><code>
+Toyota
+2021
+Blue
+The car has started.
+true
+50
+Fuel level is now: 70
+</code></pre>
+    <br />
+    <br />
+    <br />
+    <br />
+    <a href="./index.html" class="back-btn">← Back to Week 1</a>
+    <br />
+    <br />
+    <a href="../index.html" class="back-btn">← Back to Homepage</a>
+  </body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Complete Object Reference</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 960px;
+        margin: 30px auto;
+        padding: 0 20px;
+        background-color: #fafafa;
+      }
+      h1,
+      h2,
+      h3 {
+        color: #2c3e50;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 30px;
+      }
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: left;
+      }
+      th {
+        background-color: #f0f0f0;
+      }
+      p.description {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JavaScript Complete Object Reference</h1>
+
+    <h2>1. JavaScript Object Properties</h2>
+    <p class="description">
+      A JavaScript property is a member of an object that associates a key with
+      a value.
+    </p>
+
+    <h3>Instance Properties</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>constructor</td>
+          <td>
+            Returns a reference to the object constructor function that has
+            created the instance of an object.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>2. JavaScript Object Methods</h2>
+    <p class="description">
+      JavaScript methods are actions that can be performed on objects.
+    </p>
+
+    <h3>1. Static Methods</h3>
+    <p>
+      If the method is called using the Object class itself then it is called a
+      static method of Object.
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Method</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>assign()</td>
+          <td>
+            Copy the values and properties from one or more source objects to a
+            target object.
+          </td>
+        </tr>
+        <tr>
+          <td>create()</td>
+          <td>
+            JavaScript does not have the traditional classes seen in other
+            languages.
+          </td>
+        </tr>
+        <tr>
+          <td>defineProperty()</td>
+          <td>
+            Defines a new property directly on an object and returns the object.
+          </td>
+        </tr>
+        <tr>
+          <td>defineProperties()</td>
+          <td>
+            Defines a new or modifies existing properties directly on an object
+            and returns the object.
+          </td>
+        </tr>
+        <tr>
+          <td>entries()</td>
+          <td>
+            Return an array consisting of enumerable property [key, value] pairs
+            of the object.
+          </td>
+        </tr>
+        <tr>
+          <td>freeze()</td>
+          <td>Freezes an object to prevent modification.</td>
+        </tr>
+        <tr>
+          <td>fromEntries()</td>
+          <td>Transform a list of key-value pairs into an object.</td>
+        </tr>
+        <tr>
+          <td>getOwnPropertyDescriptor()</td>
+          <td>
+            Returns a property descriptor for the own property of a given
+            object.
+          </td>
+        </tr>
+        <tr>
+          <td>getOwnPropertyNames()</td>
+          <td>Returns all properties that are present in a given object.</td>
+        </tr>
+        <tr>
+          <td>getOwnPropertySymbols()</td>
+          <td>
+            Returns an array of all symbol properties that are present in a
+            given object.
+          </td>
+        </tr>
+        <tr>
+          <td>getPrototypeOf()</td>
+          <td>Check the prototype of an object.</td>
+        </tr>
+        <tr>
+          <td>hasOwn()</td>
+          <td>Checks if a given property exists or not.</td>
+        </tr>
+        <tr>
+          <td>Object.is()</td>
+          <td>Determine whether two values are the same or not.</td>
+        </tr>
+        <tr>
+          <td>isExtensible()</td>
+          <td>Checks whether an object is extensible or not.</td>
+        </tr>
+        <tr>
+          <td>isFrozen()</td>
+          <td>Determine if an object is frozen or not.</td>
+        </tr>
+        <tr>
+          <td>isSealed()</td>
+          <td>Determine if an object is sealed or not.</td>
+        </tr>
+        <tr>
+          <td>keys()</td>
+          <td>
+            Return an array of strings corresponding to the enumerable
+            properties.
+          </td>
+        </tr>
+        <tr>
+          <td>preventExtensions()</td>
+          <td>Prevents extensions and prototype changes.</td>
+        </tr>
+        <tr>
+          <td>seal()</td>
+          <td>
+            Seals an object, preventing new properties and marking all existing
+            properties as non-configurable.
+          </td>
+        </tr>
+        <tr>
+          <td>setPrototypeOf()</td>
+          <td>Sets the prototype of a specified object.</td>
+        </tr>
+        <tr>
+          <td>toLocaleString()</td>
+          <td>Returns a string representing the object.</td>
+        </tr>
+        <tr>
+          <td>values()</td>
+          <td>
+            Returns an array of the enumerable property values of an object.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>2. Instance Methods</h3>
+    <p>
+      If the method is called on an instance of an object then it is called an
+      instance method.
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Method</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>defineGetter()</td>
+          <td>Called when the specified property is looked up.</td>
+        </tr>
+        <tr>
+          <td>hasOwnProperty()</td>
+          <td>
+            Check whether the object has the specified property as its own
+            property.
+          </td>
+        </tr>
+        <tr>
+          <td>isPrototypeOf()</td>
+          <td>
+            Checks if an object exists in another object’s prototype chain.
+          </td>
+        </tr>
+        <tr>
+          <td>isEnumerable()</td>
+          <td>
+            Returns a Boolean indicating whether the specified property is
+            enumerable and is the object’s own property.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <a href="./index.html" class="back-btn">← Back to Week 1</a>
+    <br />
+    <br />
+    <a href="../index.html" class="back-btn">← Back to Homepage</a>
+    <footer
+      style="
+        margin-top: 50px;
+        padding: 10px;
+        text-align: center;
+        background-color: #f0f0f0;
+        border-top: 1px solid #ccc;
+      "
+    >
+      <p>
+        Reference:
+        <a href="https://www.geeksforgeeks.org/" target="_blank"
+          >GeeksforGeeks</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>

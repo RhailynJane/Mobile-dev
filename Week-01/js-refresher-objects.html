@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JavaScript Objects</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 850px;
+        margin: 40px auto;
+        padding: 0 20px;
+        background-color: #fdfdfd;
+      }
+      h1 {
+        color: #2c3e50;
+      }
+      h2 {
+        color: #0277bd;
+        margin-top: 30px;
+      }
+      p.description {
+        font-style: italic;
+        margin-top: 0;
+      }
+      pre {
+        background: #eceff1;
+        padding: 15px;
+        border-radius: 5px;
+        overflow-x: auto;
+      }
+      code {
+        font-family: Consolas, monospace;
+      }
+      .output {
+        background: #f1f8e9;
+        border-left: 4px solid #8bc34a;
+        padding: 10px;
+        margin-top: 5px;
+        font-family: Consolas, monospace;
+      }
+      .back-btn {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 10px 15px;
+        background-color: #0277bd;
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 0.95rem;
+      }
+      .back-btn:hover {
+        background-color: #015a8e;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JavaScript Objects</h1>
+    <p>
+      Objects in JavaScript are dynamic data structures used to store related
+      information as key-value pairs. They can be created, modified, and
+      interacted with in various ways.
+    </p>
+
+    <h2>1. Creation Using Object Literal</h2>
+    <p class="description">
+      This is the most common way to define an object, using curly braces
+      <code>{}</code> with key-value pairs.
+    </p>
+    <pre><code>let user = {
+  name: "Rhailyn",
+  age: 28,
+  job: "Student",
+  greet: function () {
+    console.log("Hello " + this.name);
+  },
+};
+console.log(user);</code></pre>
+    <div class="output">
+      Output:<br />{ name: "Rhailyn", age: 28, job: "Student", greet: ƒ }
+    </div>
+
+    <h2>2. Creation Using Object Constructor</h2>
+    <p class="description">
+      You can also create objects using the
+      <code>new Object()</code> constructor and assign properties one by one.
+    </p>
+    <pre><code>let obj = new Object();
+obj.name = "Rhailyn";
+obj.age = 28;
+obj.job = "Student";
+console.log(obj);</code></pre>
+    <div class="output">
+      Output:<br />{ name: "Rhailyn", age: 28, job: "Student" }
+    </div>
+
+    <h2>3. Modifying Object Properties</h2>
+    <p class="description">
+      You can modify the value of an existing property by simply assigning it a
+      new value.
+    </p>
+    <pre><code>let user = {
+  name: "Rhailyn",
+  age: 28,
+  job: "Student",
+  greet: function () {
+    console.log("Hello " + this.name);
+  },
+};
+user.age = 20;
+console.log(user);</code></pre>
+    <div class="output">
+      Output:<br />{ name: "Rhailyn", age: 20, job: "Student", greet: ƒ }
+    </div>
+
+    <h2>4. Adding Properties to an Object</h2>
+    <p class="description">
+      You can add new properties to an existing object using dot notation or
+      bracket notation.
+    </p>
+    <pre><code>let user = {
+  name: "Rhailyn",
+  age: 28,
+  job: "Student",
+  greet: function () {
+    console.log("Hello " + this.name);
+  },
+};
+user.nationality = "Filipino";
+console.log(user);</code></pre>
+    <div class="output">
+      Output:<br />{ name: "Rhailyn", age: 28, job: "Student", greet: ƒ,
+      nationality: "Filipino" }
+    </div>
+
+    <h2>5. Removing Properties from an Object</h2>
+    <p class="description">
+      Use the <code>delete</code> operator to remove a property from an object.
+    </p>
+    <pre><code>let user = {
+  name: "Rhailyn",
+  age: 28,
+  job: "Student",
+  greet: function () {
+    console.log("Hello " + this.name);
+  },
+};
+user.nationality = "Filipino";
+delete user.nationality;
+console.log(user);</code></pre>
+    <div class="output">
+      Output:<br />{ name: "Rhailyn", age: 28, job: "Student", greet: ƒ }
+    </div>
+
+    <h2>6. Checking if a Property Exists</h2>
+    <p class="description">
+      You can check whether a property exists using the <code>in</code> operator
+      or <code>hasOwnProperty()</code>.
+    </p>
+    <pre><code>let user = {
+  name: "Rhailyn",
+  age: 28,
+  job: "Student",
+  greet: function () {
+    console.log("Hello " + this.name);
+  },
+};
+console.log("nationality" in user);
+console.log(user.hasOwnProperty("age"));</code></pre>
+    <div class="output">Output:<br />false<br />true</div>
+
+    <h2>7. Using Methods</h2>
+    <p class="description">
+      Objects can contain functions called methods. Use
+      <code>this</code> keyword to refer to the object itself.
+    </p>
+    <pre><code>let user = {
+  name: "Rhailyn",
+  age: 28,
+  job: "Student",
+  greet: function () {
+    console.log("Hello " + this.name);
+  },
+};
+user.greet();</code></pre>
+    <div class="output">Output:<br />Hello Rhailyn</div>
+
+    <h2>8. Iterating Through Object Properties</h2>
+    <p class="description">
+      Use a <code>for...in</code> loop to iterate through all enumerable
+      properties in an object.
+    </p>
+    <pre><code>let user = {
+  name: "Rhailyn",
+  age: 28,
+  job: "Student",
+  greet: function () {
+    console.log("Hello " + this.name);
+  },
+};
+for (let key in user) {
+  console.log(key + ": " + user[key]);
+}</code></pre>
+    <div class="output">
+      Output:<br />name: Rhailyn<br />age: 28<br />job: Student<br />greet:
+      function () { console.log("Hello " + this.name); }
+    </div>
+
+    <h2>9. Merging Objects</h2>
+    <p class="description">
+      You can merge multiple objects into one using the spread syntax
+      <code>{...obj1, ...obj2}</code>.
+    </p>
+    <pre><code>let user = {
+  name: "Rhailyn",
+  age: 28,
+  job: "Student",
+  greet: function () {
+    console.log("Hello " + this.name);
+  },
+};
+let user1 = { name: "Rhai" };
+let user2 = { age: 28 };
+let user3 = { ...user1, ...user2 };
+console.log(user3);</code></pre>
+    <div class="output">Output:<br />{ name: "Rhai", age: 28 }</div>
+
+    <h2>10. Object Length</h2>
+    <p class="description">
+      Use <code>Object.keys()</code> to get an array of keys, and
+      <code>.length</code> to find how many properties an object has.
+    </p>
+    <pre><code>let user = {
+  name: "Rhailyn",
+  age: 28,
+  job: "Student",
+  greet: function () {
+    console.log("Hello " + this.name);
+  },
+};
+console.log(Object.keys(user).length);</code></pre>
+    <div class="output">Output:<br />4</div>
+
+    <h2>11. Recognizing an Object</h2>
+    <p class="description">
+      To confirm a value is an object, use <code>typeof</code> and check it is
+      not <code>null</code>.
+    </p>
+    <pre><code>let user = {
+  name: "Rhailyn",
+  age: 28,
+  job: "Student",
+  greet: function () {
+    console.log("Hello " + this.name);
+  },
+};
+console.log(typeof user === "object" && user !== null);</code></pre>
+    <div class="output">Output:<br />true</div>
+
+    <h2>12. Accessing Object Properties</h2>
+    <p class="description">
+      You can access an object’s properties using either dot notation or bracket
+      notation.
+    </p>
+    <pre><code>let obj = { name: "Rhai", age: 28 };
+
+// Using Dot Notation
+console.log(obj.name);
+
+// Using Bracket Notation
+console.log(obj["age"]);</code></pre>
+    <div class="output">Output:<br />Rhai<br />28</div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <a href="./index.html" class="back-btn">← Back to Week 1</a>
+    <br />
+    <br />
+    <a href="../index.html" class="back-btn">← Back to Homepage</a>
+    <footer
+      style="
+        margin-top: 50px;
+        padding: 10px;
+        text-align: center;
+        background-color: #f0f0f0;
+        border-top: 1px solid #ccc;
+      "
+    >
+      <p>
+        Reference:
+        <a href="https://www.geeksforgeeks.org/" target="_blank"
+          >GeeksforGeeks</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>
