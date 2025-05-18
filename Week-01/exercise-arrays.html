@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScript Array Exercise</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>JavaScript Array Exercise</h1>
+
+    <h2>1. Create an Array</h2>
+    <p>
+      Create an array called <code>students</code> with elements: "Alice",
+      "Bob", "Charlie". Then log the length of the array.
+    </p>
+    <pre><code>const students = ["Alice", "Bob", "Charlie"];
+console.log(students.length);</code></pre>
+    <div class="output">Output:<br />3</div>
+
+    <h2>2. Add an Element to the Array</h2>
+    <p>
+      Use the <code>length</code> property to add a new student "David" to the
+      end of the array. Log the updated array and its length.
+    </p>
+    <pre><code>students[students.length] = "David";
+console.log(students);
+console.log(students.length);</code></pre>
+    <div class="output">
+      Output:<br />["Alice", "Bob", "Charlie", "David"]<br />4
+    </div>
+
+    <h2>3. Iterate Over the Array</h2>
+    <p>Use a <code>for</code> loop to log each student name to the console.</p>
+    <pre><code>for (let i = 0; i < students.length; i++) {
+  console.log(students[i]);
+}</code></pre>
+    <div class="output">
+      Output:<br />Alice<br />Bob<br />Charlie<br />David
+    </div>
+
+    <h2>4. Remove an Element from the Array</h2>
+    <p>
+      Use the <code>length</code> property to remove the last element by
+      reducing the length by 1.
+    </p>
+    <pre><code>students.length = students.length - 1;
+console.log(students);
+console.log(students.length);</code></pre>
+    <div class="output">Output:<br />["Alice", "Bob", "Charlie"]<br />3</div>
+
+    <h2>5. Empty the Array</h2>
+    <p>Set <code>students.length = 0</code> to clear all elements.</p>
+    <pre><code>students.length = 0;
+console.log(students);
+console.log(students.length);</code></pre>
+    <div class="output">Output:<br />[]<br />0</div>
+
+    <h2>6. Add Multiple Elements</h2>
+    <p>
+      Use <code>push()</code> to add "Eve", "Frank", and "Grace", then log the
+      array length after each addition. Finally, print each name.
+    </p>
+    <pre><code>students.push("Eve");
+console.log(students.length);
+students.push("Frank");
+console.log(students.length);
+students.push("Grace");
+console.log(students.length);
+for (let i = 0; i < students.length; i++) {
+  console.log(students[i]);
+}</code></pre>
+    <div class="output">
+      Output:<br />1<br />2<br />3<br />Eve<br />Frank<br />Grace
+    </div>
+
+    <br /><br />
+    <a href="./index.html" class="back-btn">← Back to Week 1</a>
+    <br /><br />
+    <a href="../index.html" class="back-btn">← Back to Homepage</a>
+  </body>
+</html>

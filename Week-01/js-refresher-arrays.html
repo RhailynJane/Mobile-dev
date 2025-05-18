@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Arrays</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1>JavaScript Arrays</h1>
+  <p>In JavaScript, an array is an ordered list of values. Each value is called an element, and each element has a numeric position in the array, known as its index. Arrays in JavaScript are zero-indexed, meaning the first element is at index 0, the second at index 1, and so on.</p>
+
+  <h2>1. Create Array using Literal</h2>
+  <pre><code>// Creating an Empty Array
+let a = [];
+console.log(a);
+
+// Creating an Array and Initializing with Values
+let b = [10, 20, 30];
+console.log(b);</code></pre>
+  <div class="output">Output:<br>[]<br>[10, 20, 30]</div>
+
+  <h2>2. Create using new Keyword (Constructor)</h2>
+  <pre><code>// Creating and Initializing an array with values
+let a = new Array(10, 20, 30);
+console.log(a);</code></pre>
+  <div class="output">Output:<br>[10, 20, 30]</div>
+
+  <h2>3. Accessing Elements of an Array</h2>
+  <pre><code>// You can access elements using their index, starting from 0.
+const fruits = ["Kiwi", "Apple", "Orange"];
+console.log(fruits[0]);
+console.log(fruits[1]);</code></pre>
+  <div class="output">Output:<br>Kiwi<br>Apple</div>
+
+  <h2>4. Accessing the First Element of an Array</h2>
+  <pre><code>// Access the first element using index 0
+let fst = fruits[0];
+console.log("First Item: ", fst);</code></pre>
+  <div class="output">Output:<br>First Item: Kiwi</div>
+
+  <h2>5. Accessing the Last Element of an Array</h2>
+  <pre><code>// Use [array.length - 1] to access the last element
+let lst = fruits[fruits.length - 1];
+console.log("Last Item: ", lst);</code></pre>
+  <div class="output">Output:<br>Last Item: Orange</div>
+
+  <h2>6. Modifying the Array Elements</h2>
+  <pre><code>// You can change elements by reassigning a new value to an index
+console.log(fruits);
+fruits[0] = "Grapes";
+console.log(fruits);</code></pre>
+  <div class="output">Output:<br>["Kiwi", "Apple", "Orange"]<br>["Grapes", "Apple", "Orange"]</div>
+
+  <h2>7. Adding Elements to the Array</h2>
+  <pre><code>// Use push() to add at the end, unshift() to add at the start
+fruits.push("Banana");
+console.log(fruits);
+fruits.unshift("Blueberry");
+console.log(fruits);</code></pre>
+  <div class="output">Output:<br>["Grapes", "Apple", "Orange", "Banana"]<br>["Blueberry", "Grapes", "Apple", "Orange", "Banana"]</div>
+
+  <h2>8. Array Length</h2>
+  <pre><code>// Use length property to get the total number of elements
+console.log("Array Length: ", fruits.length);</code></pre>
+  <div class="output">Output:<br>Array Length: 5</div>
+
+  <h2>9. Removing Elements from an Array</h2>
+  <pre><code>// Use pop(), shift(), and splice() to remove elements
+console.log("Original Array: " + fruits);
+fruits.pop();
+console.log("After Removing the last: " + fruits);
+fruits.shift();
+console.log("After Removing the First: " + fruits);
+fruits.splice(1, 2);
+console.log("After Removing 2 elements starting from index 1: " + fruits);</code></pre>
+  <div class="output">Output:<br>Original Array: Blueberry,Grapes,Apple,Orange,Banana<br>After Removing the last: Blueberry,Grapes,Apple,Orange<br>After Removing the First: Grapes,Apple,Orange<br>After Removing 2 elements starting from index 1: Grapes</div>
+
+  <h2>10. Array Length Importance</h2>
+  <pre><code>// Knowing length helps in determining total elements and looping through the array
+let a = ["HTML", "CSS", "JS"];
+console.log(a.length);
+
+const numbers = [1, 2, 3, 4, 5];
+for (let i = 0; i < numbers.length; i++) {
+  console.log(numbers[i]);
+}</code></pre>
+  <div class="output">Output:<br>3<br>1<br>2<br>3<br>4<br>5</div>
+
+  <h2>11. Add Element Using Length</h2>
+  <pre><code>// Use length to add an element to the end without push()
+const animals = ["dogs", "cats"];
+animals[animals.length] = "rabbit";
+console.log(animals);</code></pre>
+  <div class="output">Output:<br>["dogs", "cats", "rabbit"]</div>
+
+  <h2>12. Truncating an Array</h2>
+  <pre><code>// You can shorten an array by changing its length
+const colors = ["Red", "Green", "Blue", "Yellow"];
+colors.length = 2;
+console.log(colors);</code></pre>
+  <div class="output">Output:<br>["Red", "Green"]</div>
+
+  <h2>13. Dynamic Nature of JavaScript Arrays</h2>
+  <pre><code>// Arrays grow or shrink as elements are added or removed
+const items = [];
+items.push("Item1");
+items.push("Items2");
+console.log(items.length);
+
+let sub = ["HTML", "CSS", "JS"];
+sub.length = 7;
+console.log("After Increasing Length: ", sub);
+sub.length = 2;
+console.log("After Decreasing Length: ", sub);</code></pre>
+  <div class="output">Output:<br>2<br>After Increasing Length: ["HTML", "CSS", "JS", <empty>, <empty>, <empty>, <empty>]<br>After Decreasing Length: ["HTML", "CSS"]</div>
+
+  <h2>14. Array Concatenation</h2>
+  <pre><code>// Use concat() to join two arrays into a new one
+let course1 = ["HTML", "CSS", "JS", "React"];
+let course2 = ["Node.js", "Express.js"];
+let concateArray = course1.concat(course2);
+console.log("Concatenated Array: ", concateArray);</code></pre>
+  <div class="output">Output:<br>Concatenated Array: ["HTML", "CSS", "JS", "React", "Node.js", "Express.js"]</div>
+
+  <h2>15. Array toString()</h2>
+  <pre><code>// Converts the array to a comma-separated string
+const soda = ["Coke", "Sprite", "Mountain Dew"];
+console.log("Array: ", soda);
+console.log("Converted to String: ", soda.toString());</code></pre>
+  <div class="output">Output:<br>Array: ["Coke", "Sprite", "Mountain Dew"]<br>Converted to String: Coke,Sprite,Mountain Dew</div>
+
+  <h2>16. Array Join</h2>
+  <pre><code>// Similar to toString(), but lets you define a separator
+console.log(soda.join("*"));</code></pre>
+  <div class="output">Output:<br>Coke*Sprite*Mountain Dew</div>
+
+  <h2>17. Check the Type of an Array</h2>
+  <pre><code>// Use typeof to check type (returns 'object' for arrays)
+console.log(typeof soda);</code></pre>
+  <div class="output">Output:<br>object</div>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <a href="./index.html" class="back-btn">← Back to Week 1</a>
+    <br />
+    <br />
+    <a href="../index.html" class="back-btn">← Back to Homepage</a>
+    <footer
+      style="
+        margin-top: 50px;
+        padding: 10px;
+        text-align: center;
+        background-color: #f0f0f0;
+        border-top: 1px solid #ccc;
+      "
+    >
+      <p>
+        Reference:
+        <a href="https://www.geeksforgeeks.org/" target="_blank"
+          >GeeksforGeeks</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>
