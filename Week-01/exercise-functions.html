@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Function Exercises</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background: #f4f4f4;
+        color: #333;
+      }
+      h2 {
+        color: #2c3e50;
+      }
+      section {
+        background: white;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      pre {
+        background: #eee;
+        padding: 10px;
+        overflow-x: auto;
+        border-radius: 4px;
+      }
+      .output {
+        background: #dff0d8;
+        padding: 10px;
+        border-left: 5px solid #3c763d;
+        margin-top: 10px;
+        white-space: pre-wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JavaScript Function Exercises</h1>
+
+    <section>
+      <h2>Exercise 1: Multiply Two Numbers</h2>
+      <p>
+        Write a function that multiplies two numbers and returns the result.
+      </p>
+      <pre><code>
+function multiply(a, b) {
+  return a * b;
+}
+console.log(multiply(4, 5));
+    </code></pre>
+      <div class="output" id="output1"></div>
+    </section>
+
+    <section>
+      <h2>Exercise 2: Check if a Number is Positive or Negative</h2>
+      <p>
+        Write a function that checks if a number is positive, negative, or zero.
+      </p>
+      <pre><code>
+function checkSign(n) {
+  return n > 0 ? "Positive" : n < 0 ? "Negative" : "Zero";
+}
+console.log(checkSign(-7));
+    </code></pre>
+      <div class="output" id="output2"></div>
+    </section>
+
+    <section>
+      <h2>Exercise 3: Reverse a String</h2>
+      <p>Write a function that reverses a given string.</p>
+      <pre><code>
+function reverseString(str) {
+  return str.split("").reverse().join("");
+}
+console.log(reverseString("hello"));
+    </code></pre>
+      <div class="output" id="output3"></div>
+    </section>
+
+    <section>
+      <h2>Exercise 4: Calculate Factorial</h2>
+      <p>Write a function to calculate the factorial of a number.</p>
+      <pre><code>
+function factorial(n) {
+  return n === 0 ? 1 : n * factorial(n - 1);
+}
+console.log(factorial(5));
+    </code></pre>
+      <div class="output" id="output4"></div>
+    </section>
+
+    <section>
+      <h2>Exercise 5: Find Maximum Number in an Array</h2>
+      <p>Write a function that finds the maximum number in an array.</p>
+      <pre><code>
+function findMax(arr) {
+  return Math.max(...arr);
+}
+console.log(findMax([3, 7, 1, 9, 4]));
+    </code></pre>
+      <div class="output" id="output5"></div>
+    </section>
+
+    <script>
+      function multiply(a, b) {
+        return a * b;
+      }
+      document.getElementById("output1").textContent = multiply(4, 5); // Output: 20
+
+      function checkSign(n) {
+        return n > 0 ? "Positive" : n < 0 ? "Negative" : "Zero";
+      }
+      document.getElementById("output2").textContent = checkSign(-7); // Output: Negative
+
+      function reverseString(str) {
+        return str.split("").reverse().join("");
+      }
+      document.getElementById("output3").textContent = reverseString("hello"); // Output: olleh
+
+      function factorial(n) {
+        return n === 0 ? 1 : n * factorial(n - 1);
+      }
+      document.getElementById("output4").textContent = factorial(5); // Output: 120
+
+      function findMax(arr) {
+        return Math.max(...arr);
+      }
+      document.getElementById("output5").textContent = findMax([3, 7, 1, 9, 4]); // Output: 9
+    </script>
+
+    <h1>JavaScript Arrow Function Exercises</h1>
+
+    <section>
+      <h2>Exercise 1: Square a Number</h2>
+      <p>Create an arrow function that returns the square of a number.</p>
+      <pre><code>
+const square = (n) => n * n;
+console.log(square(6));
+    </code></pre>
+      <div class="output" id="arrow1"></div>
+    </section>
+
+    <section>
+      <h2>Exercise 2: Convert Celsius to Fahrenheit</h2>
+      <p>Use an arrow function to convert Celsius to Fahrenheit.</p>
+      <pre><code>
+const toFahrenheit = (c) => (c * 9/5) + 32;
+console.log(toFahrenheit(25));
+    </code></pre>
+      <div class="output" id="arrow2"></div>
+    </section>
+
+    <section>
+      <h2>Exercise 3: Get Even Numbers from an Array</h2>
+      <p>
+        Use an arrow function with filter() to return even numbers from an
+        array.
+      </p>
+      <pre><code>
+const getEvens = (arr) => arr.filter(n => n % 2 === 0);
+console.log(getEvens([1, 2, 3, 4, 5, 6]));
+    </code></pre>
+      <div class="output" id="arrow3"></div>
+    </section>
+
+    <section>
+      <h2>Exercise 4: Calculate Total Price with Tax</h2>
+      <p>
+        Use an arrow function to calculate total price given base price and tax
+        rate.
+      </p>
+      <pre><code>
+const totalPrice = (price, taxRate) => price + (price * taxRate);
+console.log(totalPrice(100, 0.15));
+    </code></pre>
+      <div class="output" id="arrow4"></div>
+    </section>
+
+    <section>
+      <h2>Exercise 5: Capitalize Each Word in a Sentence</h2>
+      <p>
+        Use arrow functions with map() to capitalize each word in a sentence.
+      </p>
+      <pre><code>
+const capitalizeWords = (sentence) => sentence
+  .split(" ")
+  .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+  .join(" ");
+
+console.log(capitalizeWords("hello world from javascript"));
+    </code></pre>
+      <div class="output" id="arrow5"></div>
+    </section>
+
+    <script>
+      // Arrow Function 1
+      const square = (n) => n * n;
+      document.getElementById("arrow1").textContent = square(6); // Output: 36
+
+      // Arrow Function 2
+      const toFahrenheit = (c) => (c * 9) / 5 + 32;
+      document.getElementById("arrow2").textContent = toFahrenheit(25); // Output: 77
+
+      // Arrow Function 3
+      const getEvens = (arr) => arr.filter((n) => n % 2 === 0);
+      document.getElementById("arrow3").textContent = getEvens([
+        1, 2, 3, 4, 5, 6,
+      ]).join(", "); // Output: 2, 4, 6
+
+      // Arrow Function 4
+      const totalPrice = (price, taxRate) => price + price * taxRate;
+      document.getElementById("arrow4").textContent = totalPrice(100, 0.15); // Output: 115
+
+      // Arrow Function 5
+      const capitalizeWords = (sentence) =>
+        sentence
+          .split(" ")
+          .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+          .join(" ");
+      document.getElementById("arrow5").textContent = capitalizeWords(
+        "hello world from javascript"
+      );
+      // Output: Hello World From Javascript
+    </script>
+  </body>
+</html>

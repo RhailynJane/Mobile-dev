@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Functions & Properties</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background-color: #f9f9f9;
+      }
+      h1,
+      h2 {
+        color: #2c3e50;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 30px;
+      }
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: left;
+      }
+      th {
+        background-color: #eaeaea;
+      }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>The Complete List of JavaScript Functions & Properties</h1>
+
+    <h2>JavaScript Function Parameters</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Parameter</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Function</td>
+          <td>
+            The function definition and real values passed to the function in
+            the function definition are known as arguments.
+          </td>
+        </tr>
+        <tr>
+          <td>Rest</td>
+          <td>
+            Improved way to handle function parameters defined, allowing us to
+            more easily handle various inputs as parameters in a function.
+          </td>
+        </tr>
+        <tr>
+          <td>Default parameters</td>
+          <td>
+            In JavaScript, the parameters of functions default to undefined.
+            However, in some situations, it might be useful to set a different
+            default value.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>JavaScript Function Properties</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>length</td>
+          <td>Return the number of parameters required by a function.</td>
+        </tr>
+        <tr>
+          <td>displayName</td>
+          <td>Set the display name of the function.</td>
+        </tr>
+        <tr>
+          <td>caller</td>
+          <td>Returns the function that invoked the specified function.</td>
+        </tr>
+        <tr>
+          <td>name</td>
+          <td>Return the name of the function.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>JavaScript Functions</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Function</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>apply()</td>
+          <td>
+            It is different from the function call() because it takes arguments
+            as an array.
+          </td>
+        </tr>
+        <tr>
+          <td>isFinite()</td>
+          <td>
+            It returns true for all the values except +infinity, -infinity, or
+            NaN.
+          </td>
+        </tr>
+        <tr>
+          <td>isNaN()</td>
+          <td>It returns true if the value is a NaN else returns false.</td>
+        </tr>
+        <tr>
+          <td>unescape()</td>
+          <td>It decodes that string encoded by the escape() function.</td>
+        </tr>
+        <tr>
+          <td>escape()</td>
+          <td>
+            It can be transmitted to any computer in any network which supports
+            ASCII characters.
+          </td>
+        </tr>
+        <tr>
+          <td>number()</td>
+          <td>Convert the data type to a number.</td>
+        </tr>
+        <tr>
+          <td>map()</td>
+          <td>
+            The calling function for each and every array element in an array.
+          </td>
+        </tr>
+        <tr>
+          <td>String()</td>
+          <td>Convert the value of an object to a string value.</td>
+        </tr>
+        <tr>
+          <td>eval()</td>
+          <td>
+            If the argument represents one or more JavaScript statements, eval()
+            evaluates the statements.
+          </td>
+        </tr>
+        <tr>
+          <td>uneval()</td>
+          <td>
+            Create a string representation of the source code of an Object.
+          </td>
+        </tr>
+        <tr>
+          <td>parseInt()</td>
+          <td>
+            Accept the string and radix parameters and convert them into an
+            integer.
+          </td>
+        </tr>
+        <tr>
+          <td>parseFloat()</td>
+          <td>
+            Accept the string and convert it into a floating-point number.
+          </td>
+        </tr>
+        <tr>
+          <td>console.log()</td>
+          <td>
+            To print any kind of variables defined before in it or to just print
+            any message that needs to be displayed to the user.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Basics of Functions</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>JavaScript Operation</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Function Generator</td>
+          <td>
+            It needs to generate a value, it does so with the yield keyword
+            rather than return.
+          </td>
+        </tr>
+        <tr>
+          <td>Function Binding</td>
+          <td>In JavaScript, function binding happens using bind() method.</td>
+        </tr>
+        <tr>
+          <td>Function Invocation</td>
+          <td>
+            It is common to use the term “call a function” instead of “invoke a
+            function”.
+          </td>
+        </tr>
+        <tr>
+          <td>Function Expression</td>
+          <td>
+            Create an anonymous function that doesn’t have any function name.
+          </td>
+        </tr>
+        <tr>
+          <td>Arrow Functions</td>
+          <td>
+            Provide generator functions with a concise way to write functions in
+            JavaScript.
+          </td>
+        </tr>
+        <tr>
+          <td>Async Function</td>
+          <td>It checks that we are not breaking the execution thread.</td>
+        </tr>
+        <tr>
+          <td>Pure Functions</td>
+          <td>Returns the same result if the same arguments are passed.</td>
+        </tr>
+        <tr>
+          <td>Nested Functions</td>
+          <td>
+            Return is a combination of the output from the outer as well as the
+            inner function (nested function).
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <a href="./index.html" class="back-btn">← Back to Week 1</a>
+    <br />
+    <br />
+    <a href="../index.html" class="back-btn">← Back to Homepage</a>
+    <footer
+      style="
+        margin-top: 50px;
+        padding: 10px;
+        text-align: center;
+        background-color: #f0f0f0;
+        border-top: 1px solid #ccc;
+      "
+    >
+      <p>
+        Reference:
+        <a href="https://www.geeksforgeeks.org/" target="_blank"
+          >GeeksforGeeks</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>

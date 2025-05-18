@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Functions</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>JavaScript Functions</h1>
+    <p>
+      Functions in JavaScript are reusable blocks of code designed to perform
+      specific tasks. They allow you to organize, reuse, and modularize code. It
+      can take inputs, perform actions, and return outputs.
+    </p>
+
+    <h2>Example 1: Basic Function</h2>
+    <pre><code>function sum(x, y) {
+    return x + y;
+}
+console.log(sum(6, 9));</code></pre>
+    <p><strong>Output:</strong><br />15</p>
+
+    <h2>Function Syntax and Working</h2>
+    <ul>
+      <li>Begin with the keyword <code>function</code>.</li>
+      <li>A user-defined function name.</li>
+      <li>List of parameters inside parentheses.</li>
+      <li>Function body enclosed in curly braces <code>{}</code>.</li>
+    </ul>
+
+    <h2>Return Statement</h2>
+    <p>
+      Use <code>return</code> to return a value from a function. This is
+      optional but often used.
+    </p>
+
+    <h2>Function Parameters</h2>
+    <p>
+      These are the inputs to a function. For example: <code>sum(x, y)</code>
+    </p>
+
+    <h2>Calling Functions</h2>
+    <pre><code>// Function Definition
+function welcomeMsg(name) {
+    return ("Hello " + name + " welcome to GeeksforGeeks");
+}
+
+let nameVal = "User";
+
+// Function Call
+console.log(welcomeMsg(nameVal));</code></pre>
+    <p><strong>Output:</strong><br />Hello User welcome to GeeksforGeeks</p>
+
+    <h2>Function Invocation</h2>
+    <p>
+      Function code executes when called, triggered by events, manually, or
+      automatically.
+    </p>
+
+    <h2>Function Expression</h2>
+    <pre><code>const mul = function(x, y) {
+    return x * y;
+};
+console.log(mul(4, 5));</code></pre>
+    <p><strong>Output:</strong><br />20</p>
+
+    <h2>Arrow Functions</h2>
+    <pre><code>const a = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
+
+const a2 = a.map(function (s) {
+    return s.length;
+});
+console.log("Normal way", a2);
+
+const a3 = a.map((s) => s.length);
+console.log("Using Arrow Function", a3);</code></pre>
+    <p>
+      <strong>Output:</strong><br />Normal way [8, 6, 7, 9]<br />Using Arrow
+      Function [8, 6, 7, 9]
+    </p>
+
+    <h2>Immediately Invoked Function Expression (IIFE)</h2>
+    <pre><code>(function () {
+    console.log("This runs immediately!");
+})();</code></pre>
+    <p><strong>Output:</strong><br />This runs immediately!</p>
+
+    <h2>Callback Functions</h2>
+    <pre><code>function num(n, callback) {
+    return callback(n);
+}
+
+const double = (n) => n * 2;
+console.log(num(5, double));</code></pre>
+    <p><strong>Output:</strong><br />10</p>
+
+    <h2>Anonymous Functions</h2>
+    <pre><code>setTimeout(function () {
+    console.log("Anonymous function executed!");
+}, 1000);</code></pre>
+
+    <h2>Nested Functions</h2>
+    <pre><code>function outerFun(a) {
+    function innerFun(b) {
+        return a + b;
+    }
+    return innerFun;
+}
+
+const addTen = outerFun(10);
+console.log(addTen(5));</code></pre>
+    <p><strong>Output:</strong><br />15</p>
+
+    <h2>Pure Functions</h2>
+    <pre><code>function pureAdd(a, b) {
+    return a + b;
+}
+console.log(pureAdd(2, 3));</code></pre>
+    <p><strong>Output:</strong><br />5</p>
+
+    <h2>Key Characteristics of Functions</h2>
+    <ul>
+      <li>
+        <strong>Parameters and Arguments:</strong> Functions can accept
+        parameters and be called with arguments.
+      </li>
+      <li>
+        <strong>Return Values:</strong> Functions can return a value using the
+        return keyword.
+      </li>
+      <li>
+        <strong>Default Parameters:</strong> Default values can be assigned to
+        function parameters.
+      </li>
+    </ul>
+
+    <h2>Advantages of Functions in JavaScript</h2>
+    <ul>
+      <li>Reusability: Write code once and use it multiple times.</li>
+      <li>
+        Modularity: Break complex problems into smaller, manageable pieces.
+      </li>
+      <li>Improved Readability: Functions make code easier to understand.</li>
+      <li>
+        Maintainability: Changes can be made in one place without affecting the
+        entire codebase.
+      </li>
+    </ul>
+    <br />
+    <br />
+    <br />
+    <br />
+    <a href="./index.html" class="back-btn">← Back to Week 1</a>
+    <br />
+    <br />
+    <a href="../index.html" class="back-btn">← Back to Homepage</a>
+    <footer
+      style="
+        margin-top: 50px;
+        padding: 10px;
+        text-align: center;
+        background-color: #f0f0f0;
+        border-top: 1px solid #ccc;
+      "
+    >
+      <p>
+        Reference:
+        <a href="https://www.geeksforgeeks.org/" target="_blank"
+          >GeeksforGeeks</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>
